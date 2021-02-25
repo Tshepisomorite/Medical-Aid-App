@@ -1,0 +1,171 @@
+<form [formGroup]="detailForm" (ngSubmit)="saveBeneficiary();">
+  <div class="container">
+    <div>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal Data*
+            </mat-panel-title>
+            <mat-panel-description>
+              Main Member Personal Details
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <select matNativeControl placeholder="Title" name="title" formControlName="title" required>
+              <option value="Mr">Mr</option>
+              <mat-option value= "Mrs" >Mrs</mat-option>
+              <mat-option value="Ms">Ms</mat-option>
+              <mat-option value="Dr">Dr</mat-option>
+              <mat-option value="Prof">Prof</mat-option>
+              <mat-option value="Adv">Adv</mat-option>
+            </select>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Initials" name="initials" formControlName="initials" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="First Name" name="firstName" formControlName="firstName" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Surname" name="surname" formControlName="surname" required>
+          </mat-form-field>
+
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="ID Number" type="text" name="idNumber" formControlName="idNumber" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Date of birth" type="date" name="dateOfBirth" formControlName="dateOfBirth"
+              required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-select placeholder="Gender" name="gender" formControlName="gender" required>
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Contacts and Address
+            </mat-panel-title>
+            <mat-panel-description>
+              Main Member's contact and address details
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <input matInput placeholder="Primary phone number" name="cellphoneNumber" formControlName="cellphoneNumber"
+              required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Secondary phone number" name="contactNumber" formControlName="contactNumber">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Physical Address" name="address" formControlName="address" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="City/Town" name="city" formControlName="city" required>
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Employment
+            </mat-panel-title>
+            <mat-panel-description>
+              Main member employment details
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <input matInput placeholder="Employer" type="text" name="employer" formControlName="employer" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Job Title" name="jobTitle" type="text" formControlName="jobTitle" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Duration" name="duration" type="text" formControlName="duration" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Reference Contact Number" type="text" name="refContactNumber"
+              formControlName="refContactNumber" required>
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Banking Information
+            </mat-panel-title>
+            <mat-panel-description>
+              Main member banking information
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <input matInput placeholder="Bank Name" name="bankName" formControlName="bankName" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Bank Code" name="bankCode" formControlName="bankCode" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Branch Name" name="branchName" formControlName="branchName" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Account Holder Name" name="accHolderName" formControlName="accHolderName"
+              required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Account Number" name="accountNumber" formControlName="accountNumber" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Account Type" name="accountType" formControlName="accountType" required>
+              <mat-option value="Savings Account">Savings Account</mat-option>
+              <mat-option value="Current Account">Current Account</mat-option>
+              <mat-option value="Deposit account">Deposit Account</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Medical
+            </mat-panel-title>
+            <mat-panel-description>
+              Medical information
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+            <input matInput placeholder="Name of medical practioner" name="nameOfGeneralPractiner"
+              formControlName="nameOfGeneralPractiner">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Number of years consulted" name="numOfYearsConsulted"
+              formControlName="numOfYearsConsulted">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Doctor's address" name="doctorAdddress" formControlName="doctorAdddress">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Weight (kg)" name="weight" formControlName="weight">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Height" name="height (m)" formControlName="height">
+          </mat-form-field>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <button mat-raised-button type="submit"  class="mt-5 col-md-3" color="accent">SAVE BENEFICIARY</button>
+    <br>
+
+  </div>
+</form>
+
